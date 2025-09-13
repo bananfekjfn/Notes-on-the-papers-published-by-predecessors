@@ -23,7 +23,7 @@
 介紹如何在目前仍充滿雜訊的量子電腦上執行演算法。內容先說明量子電腦常見的雜訊來源（像是退相干、閘門誤差、讀出誤差、量子比特間干擾），然後介紹了兩大類方法來「對抗噪聲」：誤差抑制 (Error suppression)：在電路編譯或執行過程中調整，讓雜訊影響最小，例如 動態解耦 (Dynamical Decoupling, DD) 與 Pauli Twirling (PT)；誤差緩解 (Error mitigation)：在運算後透過數學方法還原比較接近真實的結果，例如 Twirled Readout Error eXtinction (TREX) 與 Zero Noise Extrapolation (ZNE)。也強調 IBM 的 Qiskit Runtime Primitives（Sampler、Estimator）已內建這些選項，使用者可以選擇合適的誤差處理策略，甚至組合多種技術來提升結果的可信度。最後也提到，這些方法是「容錯量子電腦」出現之前的重要過渡技術，幫助我們在噪聲環境下依舊能做出有意義的科學實驗。  
   
 ---**qiskit-addons**  
-介紹 Qiskit SDK 之外的進階研究工具，用來幫助設計更大規模、效能更好的量子演算法。強調 Qiskit Addons 是模組化的「外掛」，能直接插入工作流程，搭配 Qiskit SDK 使用。檔案重點包括四個代表性工具：  
+介紹 Qiskit SDK 之外的進階研究工具，用來幫助設計更大規模、效能更好的量子演算法。強調 Qiskit Addons 是模組化的「外掛」，能直接插入工作流程，搭配 Qiskit SDK 使用。重點包括四個代表性工具：  
 Multi-product formulas (MPF)：透過多種 Trotter 分解組合來降低模擬中的演算法誤差。  
 AQC-Tensor：利用張量網路壓縮電路前段，讓更多深度可以用於後續時間演化。  
 Operator backpropagation (OBP)：以減少電路深度為代價，增加算符測量數量，換取更抗雜訊的結果。  
